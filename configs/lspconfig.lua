@@ -6,7 +6,7 @@ local lspconfig = require "lspconfig"
 local servers = {
   "html", "cssls", "gopls",
   "pyright", "yamlls", "dockerls",
-  "terraformls", "vimls",
+  "terraformls", "vimls", "ansiblels"
 }
 
 for _, lsp in ipairs(servers) do
@@ -18,12 +18,10 @@ for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup(config)
 end
 
-lspconfig["yamlls"].setup {
-  settings = {
-    yaml = {
-      schemas = {
-        kubernetes = "*.{yaml,yml}"
-      }
-    }
-  }
-}
+local cfg = require("yaml-companion").setup({
+  -- Add any options here, or leave empty to use the default settings
+  -- lspconfig = {
+  --   cmd = {"yaml-language-server"}
+  -- },
+})
+lspconfig["yamlls"].setup(cfg)
