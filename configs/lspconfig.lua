@@ -24,4 +24,16 @@ local cfg = require("yaml-companion").setup({
   --   cmd = {"yaml-language-server"}
   -- },
 })
-lspconfig["yamlls"].setup(cfg)
+lspconfig.yamlls.setup(cfg)
+
+lspconfig.ansiblels.setup {
+  settings = {
+    ansible = {
+      validation = {
+        lint = {
+          enabled = false,
+        }
+      }
+    }
+  }
+}
