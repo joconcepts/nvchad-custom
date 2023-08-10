@@ -1,6 +1,5 @@
   return {
     "williamboman/nvim-lsp-installer",
-    event = "BufRead",
     config = function()
       local lsp_installer = require("nvim-lsp-installer")
 
