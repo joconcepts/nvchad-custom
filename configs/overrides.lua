@@ -27,4 +27,13 @@ M.nvimtree = {
   auto_close = true,
 }
 
+M.nvterm = {
+  behavior = {
+    autoclose_on_quit = {
+      enabled = true,
+      confirm = false,
+    }
+  }
+}
+
 return M

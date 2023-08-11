@@ -10,6 +10,13 @@ vim.filetype.add({
 	},
 })
 
-vim.api.nvim_create_user_command('GitSU', 'gsu', {})
+vim.api.nvim_create_user_command('GitSU', vim.fn.system("git submodule update --init --rebase --recursive"), {})
 
 vim.keymap.set("n", "<leader>xx", function() require("trouble").open() end)
+
+vim.api.nvim_command([[
+  autocmd BufEnter * :lua require('lazygit.utils').project_root_dir()
+]])
+
+vim.opt.listchars = { trail = '.', tab = '>-', extends = '>' }
+vim.opt.list = true
