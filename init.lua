@@ -20,3 +20,4 @@ vim.api.nvim_command([[
 
 vim.opt.listchars = { trail = '.', tab = '>-', extends = '>' }
 vim.opt.list = true
+
