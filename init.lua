@@ -1,4 +1,5 @@
 vim.g.do_filetype_lua = 1
+vim.loader.enable()
 
 vim.filetype.add({
 	pattern = {
@@ -21,3 +22,6 @@ vim.api.nvim_command([[
 vim.opt.listchars = { trail = '.', tab = '>-', extends = '>' }
 vim.opt.list = true
 
+vim.api.nvim_create_autocmd({"QuitPre"}, {
+    callback = function() vim.cmd("NvimTreeClose") end,
+})

@@ -6,7 +6,7 @@ M.mappings = require "custom.mappings"
 M.ui = {
   statusline = {
     theme = "vscode_colored",
-  }
+  },
 }
 
 

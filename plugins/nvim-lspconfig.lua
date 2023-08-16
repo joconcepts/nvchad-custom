@@ -39,10 +39,6 @@ return {
             lint = {
               enabled = false,
             }
-          },
-          completion = {
-              provideRedirectModules = true,
-              provideModuleOptionAliases = true
           }
         }
       }

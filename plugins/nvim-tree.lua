@@ -13,6 +13,9 @@ return {
       },
     },
     auto_close = true,
+    filters = {
+      custom = { ".git" }
+    },
   },
   dependencies = {
     'nvim-tree/nvim-web-devicons'
