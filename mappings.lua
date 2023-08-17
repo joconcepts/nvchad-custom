@@ -10,7 +10,11 @@ M.abc = {
         require("nvterm.terminal").send("k9s", "float")
       end
     },
-    ["<leader>rf"] = {"<cmd>lua require('telescope').extensions.recent_files.pick()<CR>", "Telescope recent files"},
+    ["<leader>rf"] = {
+      function()
+       require('telescope').extensions.recent_files.pick()
+      end,
+      "Telescope recent files"},
   }
 }
 

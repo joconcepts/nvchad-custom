@@ -12,7 +12,6 @@ return {
         },
       },
     },
-    auto_close = true,
     filters = {
       custom = { ".git" }
     },

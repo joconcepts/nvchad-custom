@@ -9,7 +9,8 @@ return {
     local servers = {
       "html", "cssls", "gopls",
       "pyright", "yamlls", "dockerls",
-      "terraformls", "vimls", "ansiblels"
+      "terraformls", "vimls", "ansiblels",
+      "ruby_ls"
     }
 
     for _, lsp in ipairs(servers) do
@@ -42,6 +43,10 @@ return {
           }
         }
       }
+    }
+
+    require('lspconfig.ui.windows').default_options = {
+      border = "single"
     }
   end,
 }
