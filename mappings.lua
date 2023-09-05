@@ -15,6 +15,11 @@ M.abc = {
        require('telescope').extensions.recent_files.pick()
       end,
       "Telescope recent files"},
+    ["<leader>rr"] = {
+      function()
+       require('telescope.builtin').registers()
+      end,
+      "Telescope recent files"},
   }
 }
 
