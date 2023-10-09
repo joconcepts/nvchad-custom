@@ -14,6 +14,7 @@ return {
       "rubocop",
       "shellcheck",
       "yaml-language-server",
+      "nil",
     },
   },
 }

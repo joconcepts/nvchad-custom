@@ -10,7 +10,7 @@ return {
       "html", "cssls", "gopls",
       "pyright", "yamlls", "dockerls",
       "terraformls", "vimls", "ansiblels",
-      "ruby_ls"
+      "ruby_ls", "nil_ls"
     }
 
     for _, lsp in ipairs(servers) do

@@ -1,6 +1,8 @@
 vim.g.do_filetype_lua = 1
 vim.loader.enable()
 
+vim.opt.termguicolors = true
+
 vim.filetype.add({
 	pattern = {
 		-- ansible playbook
